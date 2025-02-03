@@ -30,7 +30,7 @@ jobs:
   # Build job
   build:
     env:
-      PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+      PAGE_URL: "https://l-vincent-l.github.io/telegram-transparency/"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
