@@ -29,6 +29,8 @@ defaults:
 jobs:
   # Build job
   build:
+    env:
+      PAGE_URL: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

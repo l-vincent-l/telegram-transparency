@@ -6,6 +6,7 @@ import shutil
 from jinja2 import Environment, FileSystemLoader
 
 env = Environment(loader=FileSystemLoader('templates'))
+env.filters["make_url"] = lambda value: f"{os.getenv('PAGE_URL', '').rstrip('/')}/{value}"
 
 periods = [
     {"value": "2024", "label": "2024", "from": "20240101", "to": "20241231"},
